@@ -156,15 +156,30 @@ def team_names(hash)
 end
 
 def player_numbers(passed_name)
-  array = []
-  game_hash.each do |home_away, team_info|
-    if team_info[:team_name] == passed_name
-        team_info[:players].each do |player, player_info|
-          puts player_info[:number]
-        end
+  game_hash.each do |team, team_hash|
+    if team_hash[:team_name] == passed_name
+      return (team_hash[:players].collect do |player, player_hash|
+        player_hash[:number]
+      end)
     end
-    # array
   end
+
+
+
+
+
+
+
+  
+  # array = []
+  # game_hash.each do |home_away, team_info|
+  #   if team_info[:team_name] == passed_name
+  #       team_info[:players].each do |player, player_info|
+  #         puts player_info[:number]
+  #       end
+  #   end
+  #   # array
+  # end
 end
 
 
