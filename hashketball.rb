@@ -182,7 +182,7 @@ def big_shoe_rebounds
         if biggest_shoe_size < size
           biggest_shoe_size = size
         elsif biggest_shoe_size >= size
-          return player_info[:rebounds]          
+          puts player_info[:rebounds]          
         end
       end
     end
