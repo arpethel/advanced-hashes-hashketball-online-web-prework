@@ -156,7 +156,7 @@ def team_names(hash)
 end
 
 def player_numbers(passed_name)
-  game_hash.each do |team, team_info|
+  game_hash.each do |home_away, team_info|
     if team_info[:team_name] == passed_name
       return (team_info[:players].collect do |player, player_hash|
         player_hash[:number]
