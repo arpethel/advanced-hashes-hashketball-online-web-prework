@@ -193,8 +193,6 @@ end
 #       max_player = player_hash if player_hash[:shoe_size] > max_player[:shoe_size]
 #     end
 #   end
-# 
+#
 #   max_player[:stats][:rebounds]
 # end
-
-
