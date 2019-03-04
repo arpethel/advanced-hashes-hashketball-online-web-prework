@@ -150,6 +150,7 @@ end
 # Returning an array
 def team_names(hash)
   hash.collect do |which_team, team_info|
+    binding.pry
     team_info[:team_name]
   end
 end
