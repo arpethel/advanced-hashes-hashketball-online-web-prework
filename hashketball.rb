@@ -158,8 +158,8 @@ end
 def player_numbers(passed_name)
   game_hash.each do |home_away, team_info|
     if team_info[:team_name] == passed_name
-      return (team_info[:players].collect do |player, player_hash|
-        player_hash[:number]
+      return (team_info[:players].collect do |player, player_info|
+        player_info[:number]
       end)
     end
   end
