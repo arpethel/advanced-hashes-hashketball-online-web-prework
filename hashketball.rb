@@ -148,17 +148,19 @@ def team_colors(passed_name)
 end
 
 # Returning an array
-# def team_names(hash)
-#   game_hash.each do |which_team, team_info|
-#     # puts (team_info[:team_name].colect do |team| team end)
-#     puts team_info[:team_name]
-#   end
-# end
+def team_names(hash)
+  game_hash.each do |which_team, team_info|
+    # puts (team_info[:team_name].colect do |team| team end)
+    puts team_info[:team_name]
+  end
+end
 
 def player_numbers(passed_name)
   game_hash.each do |which_team, team_info|
-    if team_info[:team_name] == passed_name
-      return (team_info[:number].collect do |numbers| numbers end)
+    team_info[:players].each do |players_name, players_info|
+      if players_name == passed_name
+          return players_info[:number]
+      end
     end
   end
 end
