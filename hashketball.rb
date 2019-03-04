@@ -156,13 +156,14 @@ def team_names(hash)
 end
 
 def player_numbers(passed_name)
+  array = []
   game_hash.each do |home_away, team_info|
     if team_info[:team_name] == passed_name
         team_info[:players].each do |player, player_info|
-          return (player_info[:number].collect do |num| num end)
+          array << player_info[:number]
         end
     end
-    # player_numbers
+    array
   end
 end
 
