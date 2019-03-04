@@ -150,8 +150,7 @@ end
 # Returning an array
 def team_names(teams)
   game_hash.each do |which_team, team_info|
-    teams << team_info[:team_name]
-    teams
+    return (team_info[:team_name].colect do |team| team end)
   end
 end
 
