@@ -149,7 +149,7 @@ end
 
 # Returning an array
 def team_names(teams)
-  hash.collect do |which_team, team_info|
+  game_hash.collect do |which_team, team_info|
     team_info[:team_name]
   end
 end
