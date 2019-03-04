@@ -163,8 +163,9 @@ def player_numbers(passed_name)
           player_numbers << players_info[:number]
       end
     end
+    player_numbers
   end
-  player_numbers
+
 end
 
 
