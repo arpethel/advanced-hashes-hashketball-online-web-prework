@@ -184,4 +184,3 @@ def big_shoe_rebounds
   end
   bigfoot[:rebounds]
 end
-
