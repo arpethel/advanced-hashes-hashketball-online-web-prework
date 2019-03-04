@@ -157,11 +157,13 @@ end
 
 def player_numbers(passed_name)
   player_numbers = []
-  game_hash.each do |which_team, team_info|
+  game_hash.each do |location, team_info|
     team_info[:team_name].each do |team|
       if team == passed_name
-        team_info[:players].each do |player, number|
-          player_numbers << number
+        team_info[:players].each do |attribute, value|
+          if attribute == team_info[:players][:number]
+            player_numbers << value
+          end
         end
       end
     end
