@@ -151,7 +151,7 @@ end
 def team_names(game_hash)
   game_hash.each do |which_team, team_info|
     # puts (team_info[:team_name].colect do |team| team end)
-    puts team_info
+    puts team_info[:team_name]
   end
 end
 
