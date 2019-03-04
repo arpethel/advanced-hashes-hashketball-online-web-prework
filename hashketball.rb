@@ -149,9 +149,9 @@ end
 
 # Returning an array
 def team_names(game_hash)
-  return (game_hash.collect do |home_away, team_info|
+  game_hash.collect do |home_away, team_info|
     team_info[:team_name]
-  end)
+  end
 end
 
 def player_numbers(passed_name)
@@ -185,14 +185,3 @@ def big_shoe_rebounds
   bigfoot[:rebounds]
 end
 
-# def rebounds_for_largest_shoe_size(game)
-#   max_player = nil
-#   game.each do |team, team_hash|
-#     team_hash[:players].each do |player, player_hash|
-#       max_player ||= player_hash
-#       max_player = player_hash if player_hash[:shoe_size] > max_player[:shoe_size]
-#     end
-#   end
-#
-#   max_player[:stats][:rebounds]
-# end
