@@ -149,9 +149,7 @@ end
 
 # Returning an array
 def team_names(game_hash)
-  game_hash.collect do |which_team, team_info|
-    return team_info[:team_name]
-  end
+  game_hash.collect { |which_team, team_info| team_info[:team_name]}
 end
 
 
