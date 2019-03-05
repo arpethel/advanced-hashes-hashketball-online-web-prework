@@ -148,7 +148,7 @@ def team_colors(passed_name)
 end
 
 # Returning an array
-def team_names(game_hash)
+def team_names
   game_hash.collect do |home_away, team_info|
     team_info[:team_name]
   end
